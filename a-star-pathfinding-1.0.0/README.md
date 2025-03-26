@@ -1,6 +1,6 @@
 # A* Pathfinding Algorithm Visualizer
 
-![Demo](https://github.com/scott-dlai/A-Star-pathfinding/blob/media/demo.png)
+![Demo](https://scottdlai.github.io/a-star-pathfinding/demo.png)
 
 ## Installation
 
