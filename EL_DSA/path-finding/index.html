@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathfinding Visualization with Leaflet</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    #controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 5px 0;
+      width: 100%;
+    }
+    button:hover { background-color: #45a049; }
+    button:focus { outline: none; }
+    button:active { background-color: #3e8e41; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="controls">
+    <button id="setSourceBtn">Set Source</button>
+    <button id="setDestinationBtn">Set Destination</button>
+    <button id="startTraversalBtn" disabled>Start Traversal</button>
+  </div>
+  <script src="pathfinding.js"></script>
+</body>
+</html>

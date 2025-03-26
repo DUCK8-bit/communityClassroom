@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heuristic Pathfinding Visualization</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    #controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.9);
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+    #controls button, #controls select {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 5px 0;
+      width: 100%;
+    }
+    #controls button:hover, #controls select:hover { background-color: #45a049; }
+    #pathInfo {
+      margin-top: 10px;
+      color: #333;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="controls">
+    <select id="algoSelect">
+      <option value="astar">A* Algorithm</option>
+      <option value="dijkstra">Dijkstra</option>
+    </select>
+    <button id="clearObstaclesBtn">Clear Obstacles</button>
+    <button id="resetBtn">Reset Map</button>
+    <div id="pathInfo">Path Length: 0</div>
+    <p style="font-size: 14px; text-align: center;">
+      Instructions:<br>
+      1st click: Set Start<br>
+      2nd click: Set Destination<br>
+      Later clicks: Add Obstacles (path recalculates dynamically)
+    </p>
+  </div>
+  <script src="path.js"></script>
+</body>
+</html>
